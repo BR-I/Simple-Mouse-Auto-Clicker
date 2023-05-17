@@ -1,0 +1,27 @@
+import pyautogui
+import time
+
+def click_macro(x, y, duration=0.2):
+    """
+    Executes a mouse click macro at the specified coordinates (x, y).
+    :param x: The x-coordinate of the click location.
+    :param y: The y-coordinate of the click location.
+    :param duration: The duration between moving the mouse and performing the click.
+                     Adjust this value if needed to ensure proper execution.
+    """
+    # Move the mouse to the specified coordinates
+    pyautogui.moveTo(x, y, duration=duration)
+
+    # Perform a left mouse click
+    pyautogui.click()
+
+# Usage example
+# Replace the coordinates (x, y) with the desired click location
+click_x = 500
+click_y = 500
+
+# Wait for a few seconds before starting the macro
+time.sleep(5)
+
+# Call the function to execute the macro click
+click_macro(click_x, click_y)
